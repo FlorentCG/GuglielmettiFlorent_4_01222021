@@ -8,15 +8,17 @@ body {
 }
 
 a,
-button {
+button :hover{
     transition: all .3s ease-in-out;
-    outline: none!important;
+    
 }
 
 a:hover {
     text-decoration: none;
     cursor: pointer;
+    box-shadow: 0 0 3px rgb(211, 52, 24);
 }
+
 
 #page-loading-blocs-notifaction {
     position: fixed;
@@ -92,7 +94,7 @@ a:hover {
 }
 
 .texture-paper::before {
-    background: url("img/texture-paper.png");
+    
     background-size: 280px 280px;
 }
 
@@ -104,9 +106,7 @@ a:hover {
     color: rgba(255, 255, 255, .7);
 }
 
-.d-bloc button:hover {
-    color: rgba(255, 255, 255, .9);
-}
+
 
 .d-bloc .icon-round,
 .d-bloc .icon-square,
@@ -158,11 +158,7 @@ a:hover {
     background: rgba(255, 255, 255, 1);
 }
 
-.d-bloc .btn-wire,
-.d-bloc .btn-wire:hover {
-    color: rgba(255, 255, 255, 1);
-    border-color: rgba(255, 255, 255, 1);
-}
+
 
 .d-bloc .panel {
     color: rgba(0, 0, 0, .5);
@@ -306,6 +302,8 @@ a:hover {
     max-height: 200px;
     margin: 0 5px 0 0;
     display: inline;
+    width: 300px;
+    height: 65px;
 }
 
 .navbar-brand img[src$=svg] {
@@ -333,10 +331,7 @@ a:hover {
     text-align: inherit;
 }
 
-.nav > li a:hover,
-.nav > li a:focus {
-    background: transparent;
-}
+
 
 .navbar-toggle {
     margin: 10px 10px 0 0;
@@ -457,12 +452,12 @@ nav .caret {
 .btn-d,
 .btn-d:hover,
 .btn-d:focus {
-    color: #FFF;
+    
     background: rgba(0, 0, 0, .3);
 }
 
-button {
-    outline: none!important;
+button :hover{
+    box-shadow: 0 0 3px black;
 }
 
 .btn-rd {
@@ -605,7 +600,7 @@ a[data-lightbox]:hover img {
 .next-lightbox:hover,
 .prev-lightbox:hover {
     opacity: 1.0;
-    color: #FFF;
+  
 }
 
 .next-lightbox,
@@ -682,7 +677,7 @@ p {
 }
 
 .tight-width-whitespace {
-    max-width: 600px;
+    max-width: 70%;
     margin: auto auto auto auto;
 }
 
@@ -708,8 +703,7 @@ p {
 h2 {
     font-size: 18px;
     line-height: 1.4em;
-    background-color: white;
-    border-radius: 999px;
+   
     padding:2rem;
 }
 
@@ -778,7 +772,8 @@ h4 {
 }
 
 .tc-white {
-    color:#BD460F!important;
+    color:white!important;
+    font-size: x-large;
 }
 
 .btn-atomic-tangerine {
@@ -788,15 +783,15 @@ h4 {
 
 .btn-atomic-tangerine:hover {
     background: #c27956!important;
-    color: #FFFFFF!important;
+    
 }
 
 .ltc-white {
     color: #FFFFFF!important;
 }
 
-.ltc-white:hover {
-    color: #cccccc!important;
+ltc-white bold-link{
+    font-size: 20px;
 }
 
 .ltc-atomic-tangerine {
