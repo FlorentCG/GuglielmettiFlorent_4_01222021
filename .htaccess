@@ -1,1 +1,38 @@
-RedirectPermanent /page2.html http://127.0.0.1:5500
+<IfModule mod_gzip.c>
+   mod_gzip_on Yes
+   mod_gzip_can_negotiate Yes
+   mod_gzip_static_suffix .gz
+   AddEncoding gzip .gz
+   mod_gzip_update_static No
+   mod_gzip_command_version '/mod_gzip_status'
+   mod_gzip_temp_dir /tmp
+   mod_gzip_keep_workfiles No
+   mod_gzip_minimum_file_size 500
+   mod_gzip_maximum_file_size 500000
+   mod_gzip_maximum_inmem_size 60000
+   mod_gzip_min_http 1000
+   mod_gzip_handle_methods GET POST
+   mod_gzip_item_exclude reqheader "User-agent: Mozilla/4.0[678]"
+   mod_gzip_item_include file \.html$
+   mod_gzip_item_include file \.htm$
+   mod_gzip_item_include file \.php3$
+   mod_gzip_item_include file \.php$
+   mod_gzip_item_include file \.js$
+   mod_gzip_item_include file \.css$
+   mod_gzip_item_include mime ^text/
+   mod_gzip_item_exclude mime ^httpd/unix-directory
+   mod_gzip_item_exclude mime ^image/
+   mod_gzip_dechunk Yes
+   mod_gzip_add_header_count Yes
+   mod_gzip_send_vary Yes
+</IfModule>
+
+
+<IfModule mod_expires.c>
+    ExpiresActive on
+    ExpiresDefault "access plus 1 month"
+    ExpiresByType text/css "access plus 1 day"
+    ExpiresByType image/png "access plus 1 week"
+    ExpiresByType image/gif "access plus 1 week"
+    ExpiresByType image/jpeg "access plus 1 week"
+</IfModule>
